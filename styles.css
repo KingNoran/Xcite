@@ -65,6 +65,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 /* Header */
@@ -125,11 +126,42 @@ header nav ul li:hover{
 
 .body img{
     flex: 1;
+    position: absolute;
+    animation: img-load 1s;
+    left: 400px;
 }
 
-.body p{
-    flex: 1;
+@keyframes img-load{
+  0%{
+    opacity: 0;
+    left: -400px;
+    filter: blur(5px);
+  }
+  100%{
+    opacity: 1;
+    filter: blur(0);
+  }
 }
+
+.body .main-text{
+    flex: 1;
+    position: absolute;
+    right: 400px;
+    animation: txt-load 1s;
+}
+
+@keyframes txt-load{
+  0%{
+    opacity: 0;
+    right: -400px;
+    filter: blur(5px);
+  }
+  100%{
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 
 /* Footer */
 
