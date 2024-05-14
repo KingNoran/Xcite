@@ -71,10 +71,13 @@ body{
 /* Header */
 
 header{
+  border-bottom: solid .5px rgba(0,0,0,0.2);
+}
+
+header .main-header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid .5px rgba(0,0,0,0.2);
     padding: 1rem 5rem;
 }
 
@@ -113,6 +116,10 @@ header nav ul li:hover{
     transform: scale(0.90);
 }
 
+header .dropDown{
+  display: none;
+}
+
 /* Body */
 
 .body{
@@ -129,7 +136,7 @@ header nav ul li:hover{
     flex: 1;
     position: absolute;
     animation: img-load 1s;
-    left: 400px;
+    left: 22.5vw;
 }
 
 @keyframes img-load{
@@ -147,7 +154,7 @@ header nav ul li:hover{
 .body .main-text{
     flex: 1;
     position: absolute;
-    right: 400px;
+    right: 22.5vw;
     animation: txt-load 1s;
 }
 
@@ -181,18 +188,17 @@ footer{
 header .hamburger {
   border: none; 
   padding: 0;
-}
-
-header .hamburger,
-header .hamburger {
+  transition: transform 0.5s;
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
-  header {
-    padding: 1rem 1rem;
-  }
+header .hamburger:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+}
 
+
+@media only screen and (max-width: 768px) {
   body {
     display: flex;
     flex-direction: column;
@@ -203,9 +209,46 @@ header .hamburger {
     display: none;
   }
 
+  header .main-header-container{
+    padding: 1rem;
+  }
+
   header .hamburger {
     display: flex;
     margin-left: auto;
+  }
+
+  header .dropDown ul.links{
+    display: block;
+    list-style: none;
+    padding: 0;
+  }
+
+  .dropDown.show{
+    display: block;
+  }
+
+  header .dropDown li{
+    padding: 0 1rem;
+  }
+
+  header .dropDown li:last-of-type{
+    margin-bottom: 1rem;
+  }
+
+  header .dropDown a{
+    text-decoration: none;
+    color:#40E0D0;
+    font-size: 1.2rem;
+  }
+
+  header .dropDown a:hover{
+    color:#FD9F05;
+  }
+
+  header .dropDown li:hover{
+    background-color: #fff;
+    border-left: 0.5rem solid orange;
   }
 
   .body{
