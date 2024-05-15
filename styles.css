@@ -54,6 +54,11 @@
     color: #40E0D0;
 }
 
+.active{
+  color :#FD9F05;
+  font-size: 1.35rem;
+}
+
 /* MAIN PAGE */ 
 
 *{
@@ -251,6 +256,15 @@ header .hamburger:hover{
     border-left: 0.5rem solid orange;
   }
 
+  header .dropDown a.active{
+    color:#FD9F05;
+  }
+
+  header .dropDown li.active{
+    border-left: 0.5rem solid orange;
+    background-color: white;
+  }
+
   .body{
     flex: 1;
     display: flex;
@@ -284,4 +298,14 @@ header .hamburger:hover{
     font-size: 1rem;
   }
 
+}
+
+/* SVGs */
+
+svg.burger{
+  color:#40E0D0;
+}
+
+svg.burger:hover{
+  color:#FD9F05;
 }
