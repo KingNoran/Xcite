@@ -51,7 +51,7 @@
 
 /* Utilities */
 .highlight{
-    color: #40E0D0;
+    color: yellow;
 }
 
 .active{
@@ -70,13 +70,13 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 /* Header */
 
 header{
   border-bottom: solid .5px rgba(0,0,0,0.2);
+  background-color: #333;
 }
 
 header .main-header-container{
@@ -137,11 +137,17 @@ header .dropDown{
     font-size: 3rem;
 }
 
-.body img{
+.body.main img{
     flex: 1;
     position: absolute;
     animation: img-load 1s;
     left: 22.5vw;
+}
+
+.body.main{
+  background: darkcyan;
+  margin: 0;
+  color: white;
 }
 
 @keyframes img-load{
@@ -182,7 +188,7 @@ footer{
     font-size: 1.5rem;
     display: block;
     text-align: center;
-    background-color: #999;
+    background-color: black;
     color: #f9f9f9;
     padding: 1rem;
 }
@@ -208,7 +214,7 @@ header .hamburger:hover{
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    overflow-x: hidden;
+
   }
   .links {
     display: none;
@@ -309,3 +315,64 @@ svg.burger{
 svg.burger:hover{
   color:#FD9F05;
 }
+
+/* MAIN PAGE END */
+
+/* COURSES AND PROJECTS */
+
+.body.CnP{
+  display: flex;
+  margin: 0;
+  padding: 5rem;
+  background-color: darkcyan;
+}
+
+.body.CnP p, a{
+  font-size: 1.5rem;
+}
+
+.body.CnP p{
+  color: #f3f3f3;
+}
+
+.body.CnP a{
+  color: white;
+  font-style: italic;
+  transition: transform 0.5s;
+}
+
+.body.CnP a:hover{
+  color: yellow;
+  font-size: 1.6rem;
+}
+
+.body.CnP h2, h3{
+  color: yellow;
+}
+
+.body.CnP img{
+  margin: 2rem 0;
+  display: block;
+  min-height: 100%;
+}
+
+.body.CnP .slide{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.body.CnP button{
+  border: none;
+  background-color: transparent;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.body.CnP button:hover{
+  color: yellow;
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+/* COURSES AND PROJECTS END*/
