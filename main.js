@@ -17,7 +17,7 @@ burger.addEventListener('click', ()=>{
 });
 
 logo.addEventListener('click', ()=>{
-    window.location.assign(`${window.location.origin}`);
+    window.location.assign(`${window.location.origin}/Xcite/`);
 });
 
 // Courses and Projects
