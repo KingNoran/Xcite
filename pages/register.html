@@ -40,8 +40,51 @@
                 </ul>
             </div>
         </header>
-        <div class="body">
-            Body
+        <div class="body register">
+            <form action="#" method="post">
+                <!-- Hide arrows/spinners and limit input to 11-digits -->
+                <label for="student-number">Student Number:</label>
+                <input type="number" id="student-number" name="student-number" placeholder="Student Number" required>
+
+                <!--Allow letters only?? -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <!-- Senior High Strands -->
+                    <option value="Accountancy, Business, and Management">Accountancy, Business, and Management</option>
+                    <option value="Science, Technology, Engineering, and Mathematics">Science, Technology, Engineering, and Mathematics</option>
+                    <option value="Humanities and Social Sciences">Humanities and Social Sciences</option>
+                    <option value="General Academic">General Academic</option>
+                    <option value="IT in Mobile App and Web Development">IT in Mobile App and Web Development</option>
+                    <option value="Digital Arts">Digital Arts</option>
+                    <option value="Tourism Operations">Tourism Operations</option>
+                    <option value="Culinary Arts">Culinary Arts</option>
+                    <!-- Tertiary Programs -->
+                    <option value="BSCS">Bachelor of Science in Computer Science (BSCS)</option>
+                    <option value="BSIT">Bachelor of Science in Information Technology (BSIT)</option>
+                    <option value="BSCpE">Bachelor of Science in Computer Engineering (BSCpE)</option>
+                    <option value="BSBA">Bachelor of Science in Business Administration (BSBA)</option>
+                    <option value="BSAIS">Bachelor of Science in Accounting Information System (BSAIS)</option>
+                    <option value="BSHM">Bachelor of Science in Hospitality Management (BSHM)</option>
+                    <option value="BACOMM">Bachelor of Arts in Communication (BACOMM)</option>
+                    <option value="BMMA">Bachelor of Multimedia Arts (BMMA)</option>
+                    <option value="BSTM">Bachelor of Science in Tourism Management (BSTM)</option>
+                </select>
+
+                <label for="year-lvl">Year level:</label>
+                <select id="year-lvl" name="year-lvl">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <!-- Specific events undetermined -->
+
+                <button value="submit" type="submit">SUBMIT</button>
+            </form>
         </div>
         <footer>
             7th floor of STI Las Piñas Campus | May 27 - 29
