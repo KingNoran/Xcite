@@ -66,11 +66,17 @@ $(document).ready(function() {
         let course = document.getElementById("course").value;
         let year = document.getElementById("year-lvl").value;
 
-        $.post("/db_operations.php", {"student-number":studID, "name":name, "course":course, "year-lvl":year}, function(data) {
-            console.log("AJAX request successful", data); 
-            alert("Registered Successfully!");
-
-            document.getElementById("xcite-form").reset();
-        });
+        if (studID.length < 11) {
+            document.getElementById("student-number").value = "";
+            alert("Student number should be 11 characters.");
+        }
+        else {
+            $.post("/db_operations.php", {"student-number":studID, "name":name, "course":course, "year-lvl":year}, function(data) {
+                console.log("AJAX request successful", data); 
+                alert("Registered Successfully!");
+    
+                document.getElementById("xcite-form").reset();
+            });
+        }    
     });
 });
