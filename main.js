@@ -68,6 +68,7 @@ $(document).ready(function() {
 
         $.post("/db_operations.php", {"student-number":studID, "name":name, "course":course, "year-lvl":year}, function(data) {
             console.log("AJAX request successful", data); 
+            alert("Registered Successfully!");
         });
     });
 });
