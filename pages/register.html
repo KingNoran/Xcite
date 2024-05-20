@@ -41,12 +41,10 @@
             </div>
         </header>
         <div class="body register">
-            <form action="../db_operations.php" method="post">
-                <!-- Hide arrows/spinners and limit input to 11-digits -->
+            <form id="myForm" action="../db_operations.php" method="POST">
                 <label for="student-number">Student Number:</label>
                 <input type="number" id="student-number" name="student-number" placeholder="Student Number" required>
 
-                <!--Allow letters only?? -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Name" required>
 
@@ -83,7 +81,7 @@
 
                 <!-- Specific events undetermined -->
 
-                <button value="submit" type="submit">SUBMIT</button>
+                <button type="submit" name="submit">SUBMIT</button>
             </form>
         </div>
         <footer>
