@@ -1,5 +1,4 @@
 <?php
-    var_dump($_POST);
     
     $studID = $_POST["student-number"];
     $name = $_POST["name"];
@@ -18,7 +17,8 @@
         $stmt->bind_param("issi", $studID, $name, $course, $year);
         $stmt->execute();
 
-        echo "Registration Successfully!";
+        $message = "Registered Successfully";
+        echo "<script type='text/javascript'>alert('$message');</script>";
 
         $stmt->close();
         $conn->close();
