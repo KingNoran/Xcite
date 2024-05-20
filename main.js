@@ -22,7 +22,7 @@ logo.addEventListener('click', ()=>{
 
 // Courses and Projects
 
-let currentIndex = 0;
+ let currentIndex = 0;
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.slide');
@@ -34,15 +34,40 @@ function showSlide(index) {
     slides[currentIndex].style.display = 'flex';
 }
 
+let mybutton = document.getElementById("scrollToTopBtn");
+
 function nextSlide() {
     showSlide(++currentIndex);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 function prevSlide() {
     showSlide(--currentIndex);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 // Initialize slider
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentIndex);
+});
+
+
+// AJAX 
+
+$(document).ready(function() {
+    $("form").submit(function(event) {
+        event.preventDefault();
+        console.log("Form submission prevented");
+
+        let studID = document.getElementById("student-number").value;
+        let name = document.getElementById("name").value;
+        let course = document.getElementById("course").value;
+        let year = document.getElementById("year-lvl").value;
+
+        $.post("/db_operations.php", {"student-number":studID, "name":name, "course":course, "year-lvl":year}, function(data) {
+            console.log("AJAX request successful", data); 
+        });
+    });
 });
