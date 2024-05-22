@@ -61,17 +61,18 @@ $(document).ready(function() {
         event.preventDefault();
         console.log("Form submission prevented");
 
-        let studID = document.getElementById("student-number").value;
-        let name = document.getElementById("name").value;
-        let course = document.getElementById("course").value;
-        let year = document.getElementById("year-lvl").value;
+        const studID = document.getElementById("student-number").value;
+        const name = document.getElementById("name").value;
+        const course = document.getElementById("course").value;
+        const year = document.getElementById("year-lvl").value;
+        const eventValue = document.getElementById("event").value;
 
         if (studID.length < 11) {
             document.getElementById("student-number").value = "";
             alert("Student number should be 11 characters.");
         }
         else {
-            $.post("/db_operations.php", {"student-number":studID, "name":name, "course":course, "year-lvl":year}, function(data) {
+            $.post("/db_operations.php", {"student-number":studID, "name":name, "course":course, "year-lvl":year, "event":eventValue}, function(data) {
                 console.log("AJAX request successful", data); 
                 alert("Registered Successfully!");
     
