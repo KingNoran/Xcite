@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="../main.js"></script>
     <title>Welcome to Xcite!</title>
 </head>
@@ -14,7 +15,9 @@
         <header>
             <div class="main-header-container">
                 <div class="logo-container">
-                    <img id="logo" src="../img/logo.svg" alt="Xcite logo">
+                    <a href="../index.html">
+                        <img id="logo" src="../img/logo.svg" alt="Xcite logo">
+                    </a>
                 </div>
                 <nav>
                     <ul class="links">
@@ -41,14 +44,13 @@
             </div>
         </header>
         <div class="body register">
-            <form action="#" method="post">
-                <!-- Hide arrows/spinners and limit input to 11-digits -->
+            <form id="xcite-form" action="../db_operations.php" method="POST">
+                <!-- Student Info -->
                 <label for="student-number">Student Number:</label>
-                <input type="number" id="student-number" name="student-number" placeholder="Student Number" required>
+                <input type="number" id="student-number" name="student-number" placeholder="Student Number" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" required>
 
-                <!--Allow letters only?? -->
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="text" id="name" name="name" placeholder="Name" autocomplete="off" onkeydown="return /[a-z\ -.,]/i.test(event.key)" required>
 
                 <label for="course">Course:</label>
                 <select id="course" name="course" required>
@@ -74,16 +76,31 @@
                 </select>
 
                 <label for="year-lvl">Year level:</label>
-                <select id="year-lvl" name="year-lvl">
+                <select id="year-lvl" name="year-lvl" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
 
-                <!-- Specific events undetermined -->
+                <!-- Events -->
+                <label for="event">Events:</label>
+                <select id="event" name="event" required>
+                    <option value="None">None</option>
+                    <option value="ICT Quiz Bee">ICT Quiz Bee</option>
+                    <option value="Call of Duty Mobile Tournament">Call of Duty Mobile Tournament</option>
+                    <option value="Rubiks Cube Tournament">Rubiks Cube Tournament</option>
+                    <option value="NBA 2K24 Tournament">NBA 2K24 Tournament</option>
+                    <option value="Tetris Tournament">Tetris Tournament</option>
+                    <option value="Street Fighter Tournament">Street Fighter Tournament</option>
+                    <option value="8 Ball Pool Tournament">8 Ball Pool Tournament</option>
+                    <option value="Tekken 8 Tournament">Tekken 8 Tournament </option>
+                    <option value="Speed Stacks Tournament">Speed Stacks Tournament</option>
+                    <option value="Mobile Legends: Bang Bang Tournament">Mobile Legends: Bang Bang Tournament</option>
+                    <option value="Mr. and Ms. ICT">Mr. and Ms. ICT</option>
+                </select>
 
-                <button value="submit" type="submit">SUBMIT</button>
+                <button type="submit" name="submit">SUBMIT</button>
             </form>
         </div>
         <footer>
