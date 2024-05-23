@@ -135,6 +135,7 @@ header .dropDown{
     margin: 1rem 25rem;
     gap: 5rem;
     font-size: 3rem;
+    background-color: darkcyan;
 }
 
 .body.main img{
@@ -145,7 +146,6 @@ header .dropDown{
 }
 
 .body.main{
-  background: darkcyan;
   margin: 0;
   color: white;
 }
@@ -280,6 +280,7 @@ header .hamburger:hover{
     margin: 1rem;
     gap: 1rem;
     font-size: 3rem;
+    background-color: darkcyan;
 }
 
   .body.main img {
@@ -312,7 +313,6 @@ header .hamburger:hover{
 .body.register{
   margin: 0;
   padding: 5rem 3rem;
-  background-color: darkcyan;
   display: flex;
 }
 
@@ -384,7 +384,6 @@ header .hamburger:hover{
 .body.CnP{
   margin: 0;
   padding: 5rem 15rem;
-  background-color: darkcyan;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -480,6 +479,61 @@ header .hamburger:hover{
 }
 
 /* COURSES AND PROJECTS END*/
+
+/* EVENTS */
+.body.events{
+  display: flex;
+  margin: 0;
+  padding: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.body.events #quizbee{
+  padding: 16rem;
+}
+
+.body.events .others{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.body.events .others .content img{
+  width: 110%;
+  max-width: 500px;
+}
+
+.body.events .others .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 1068px){
+  .body.events #quizbee{
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .body.events{
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* EVENTS END */
 
 /* SVGs */
 
